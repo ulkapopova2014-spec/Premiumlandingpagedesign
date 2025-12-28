@@ -5,11 +5,9 @@ export default defineConfig({
   base: '/Premiumlandingpagedesign/',
   plugins: [react()],
   build: {
-    outDir: 'dist'
-  },
-  resolve: {
-    alias: {
-      'figms:': ''
+    outDir: 'dist',
+    rollupOptions: {
+      external: [/^figms:/]
     }
   }
 })
